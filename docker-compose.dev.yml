@@ -1,0 +1,6 @@
+version: '3.2'
+services: 
+  backend:
+    ports:
+      - 8000:8000
+    command: /bin/bash -c "go get ./... && go get github.com/codeskyblue/fswatch && go install github.com/codeskyblue/fswatch && fswatch"
